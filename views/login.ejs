@@ -4,10 +4,10 @@
     <h2>Log in </h2>
     <label for='email'>Email</label>
     <input type='text' name='email' required>
-    <dev class="email error"></dev>
+    <div class="email error"></div>
     <label for='password'>Password</label>
     <input type='password' name='password' required>
-    <dev class="password error"></dev>
+    <div class="password error"></div>
     <button>Log in</button>
 </form>
 
@@ -42,9 +42,9 @@
                 passwordError.textContent = data.errors.password 
             }
 
-            // if(data.user){
-            //     location.assign('/')
-            // }
+            if(data.user){
+                location.assign('/')
+            }
         } catch (e) {
             console.log(e.message)
         }
